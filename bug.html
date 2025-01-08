@@ -1,0 +1,10 @@
+The following Tailwind CSS class results in an unexpected layout:
+
+```html
+<div class="flex items-center justify-between">
+  <div>Left content</div>
+  <div>Right content</div>
+</div>
+```
+
+If the "Left content" div is significantly larger than the "Right content" div, the "Right content" will not be pushed to the far right.  Instead, both divs will be stacked vertically within the parent, effectively ignoring the `justify-between` utility.
