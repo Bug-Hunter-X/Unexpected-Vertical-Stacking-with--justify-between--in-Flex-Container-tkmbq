@@ -1,0 +1,10 @@
+To fix the issue, ensure that the smaller element has a minimum width using the `min-w-[value]` utility to guarantee it takes up enough horizontal space to trigger `justify-between` behavior:
+
+```html
+<div class="flex items-center justify-between">
+  <div>Left content</div>
+  <div class="min-w-[100px]">Right content</div>
+</div>
+```
+
+Adjust `100px` as needed to achieve the desired layout.  Experiment with different values to find the optimal minimum width depending on the size of your content.  Other potential solutions might involve setting a specific width, using `flex-shrink` or `flex-grow`, or refactoring your HTML structure.
